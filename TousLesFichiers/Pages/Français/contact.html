@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="utf-8">
+      <title>Portfolio Maud Lherbier</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../../Style/Français/contact.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+   </head>
+   <body>
+       <script src="../../JS/Français/contact.js"></script>
+        <div class="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+     <!-- Sans le data toggle et le data target le menu ne se déroule pas quand il est caché en apuyant sur le bouton -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span> <!-- Navbar-toggler-icon : apparence du bouton du menu "caché" -->
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> <!-- Cette ligne sert pour cacher les liens dans le menu "caché" -->
+    <div class="navbar-nav">
+
+      <a class="nav-item nav-link col-lg-1 col-md-3 col-sm-3" href="../../../index.html" id="accueil"> Accueil </a>
+      <a class="nav-item nav-link col-lg-1 col-md-2 col-sm-3" href="onepage.html" id="onepage">Onepage</a>
+        <a class="nav-item nav-link col-lg-2 col-md-2 col-sm-3" href="parcoursScolaire.html" id="parcoursScolaire">Parcours scolaire</a>
+        <a class="nav-item nav-link col-lg-1 col-md-2 col-sm-3" href="competences.html" id="competences">Compétences</a>
+        <a class="nav-item nav-link col-lg-1 col-md-2 col-sm-3" href="realisations.html" id="realisations">Réalisations</a>
+      <a class="nav-item nav-link col-lg-1 col-md-2 col-sm-3" href="cv.html" id="cv">CV</a>
+      <a class="nav-item active nav-link col-lg-1 col-md-2 col-sm-3" href="contact.html" id="contact">Contact</a>
+        <a class="navbar-item navbar-brand col-lg-1 col-md-2 col-sm-3" href="../Anglais/contact.html" id="contacta"><img id="gb" src="../../Images/gb.png" alt="gb"></a>
+        
+
+    </div>
+  </div>
+</nav>
+        
+       </div>
+       <div class="container-fluid">
+        <div class="row">
+            <h1>Contact :</h1>
+            
+            </div>
+       </div>
+       <div class="container-fluid">
+        <div class="row">
+            <img src="../../Images/Icon-linkedin.svg" class="icone" id='linkedin-icon'>
+            <a href='https://www.linkedin.com/in/maud-lherbier/' target="_blank">
+            <label for="linkedin-icon" id="link" class="link">Maud Lherbier</label></a>
+        </div>
+        <div class="row">
+            <img src="../../Images/Icon-facebook.svg" class="icone" id='facebook-icon'>
+            <a href='https://facebook.com/maudlh02' target="_blank"><label for="facebook-icon" class="link">Maud Lherbier</label></a>
+        </div>
+        <div class="row">
+            <img src="../../Images/Icon-email.svg" class="icone" id='email-icon'>
+            <label for="email-icon">maud.lherbier@gmail.com</label>
+        </div>
+        <div class="row">
+            <img src="../../Images/Icon-phone.svg" class="icone" id='phone-icon'>
+            <label for="phone-icon">06 33 73 25 45</label>
+        </div>
+        
+            <hr>
+       <div id="formulaire">
+ <form>
+     <p></p>
+    <p>
+        <label for="nom" class="champ"> Votre Nom : * </label>
+        <input type="text" name="nom" id="nom" value="" onkeypress="check()"/>
+    </p>
+
+	<p>
+        <label for="prenom" class="champ">Votre Prénom : *</label>
+        <input type="text" name="prenom" id="prenom" value="" onkeypress="check()"/>
+    </p>
+
+     <p>
+        <label for="entreprise" class="champ">Nom de votre entreprise :</label>
+         <input type="text" name="entreprise" id="entreprise" value="" onkeypress="check()"/>
+    </p>
+
+	<p>
+  <label for="email" class="champ">Votre adresse mail : *</label>
+   <input type="email" name="email" size="20"
+   maxlength="40"  id="email" value=""/>   </p>
+     
+     <p>
+  <label for="tel" class="champ">Votre téléphone :</label>
+   <input type="tel" name="tel" size="10"
+   maxlength="10"  id="tel" value="" onkeypress="checkNum()"/>   </p>
+
+    <p>
+        <label for="message" class="champ">Entrer votre message : * </label></p>
+    <p><textarea cols="100" rows="5" id="message"></textarea></p>
+     
+     <p class="gras">Les éléments marqués de "*", représentent des champs obligatoires.</p>
+
+     <p><input type="checkbox" name="donnees" value="" id="donnees"/> Protection des données personnelles  * </p>
+
+     <p id="protection">En cochant cette case, vous acceptez que les données collectées dans le présent formulaire soient utilisées afin de me contacter. Depuis la loi “informatique et libertés” du 6 janvier 1978 modifiée et conformément au Règlement Général sur la Protection des Données (n°2016/679), vous bénéficiez d’un droit d’accès, de rectification ou de suppression des informations qui vous concernent. Si vous souhaitez exercer ce droit et obtenir communication des informations vous concernant, veuillez le renseigner dans le message ci-dessus. </p>
+    </form>
+           
+     <input type="button" name="Valider" id="valider" value="Valider" onclick="valider();"/>
+    </div>
+       </div>
+    
+    </body>
+    
+     <footer class="page-footer "> 
+        <div id="footer">
+        <div class="container">
+      <div class="jumbotron jumbotron-fluid" id="footerj">
+        <p class="lead">Maud Lherbier</p>
+          <p class="lead">Tous droits réservés</p>
+        </div>
+        </div>
+        </div>
+    </footer>
+</html>
