@@ -64,16 +64,16 @@
         
             <hr>
        <div id="formulaire">
- <form>
+ <form method="post" action='contact.html'>
      <p></p>
     <p>
         <label for="nom" class="champ"> Votre Nom : * </label>
-        <input type="text" name="nom" id="nom" value="" onkeypress="check()"/>
+        <input type="text" name="nom" id="nom" value="" onkeypress="check()" required/>
     </p>
 
 	<p>
         <label for="prenom" class="champ">Votre Prénom : *</label>
-        <input type="text" name="prenom" id="prenom" value="" onkeypress="check()"/>
+        <input type="text" name="prenom" id="prenom" value="" onkeypress="check()" required/>
     </p>
 
      <p>
@@ -84,7 +84,7 @@
 	<p>
   <label for="email" class="champ">Votre adresse mail : *</label>
    <input type="email" name="email" size="20"
-   maxlength="40"  id="email" value=""/>   </p>
+   maxlength="40"  id="email" value="" required/>   </p>
      
      <p>
   <label for="tel" class="champ">Votre téléphone :</label>
@@ -93,18 +93,49 @@
 
     <p>
         <label for="message" class="champ">Entrer votre message : * </label></p>
-    <p><textarea cols="100" rows="5" id="message"></textarea></p>
+    <p><textarea cols="100" name="message" rows="5" id="message" required></textarea></p>
      
      <p class="gras">Les éléments marqués de "*", représentent des champs obligatoires.</p>
 
-     <p><input type="checkbox" name="donnees" value="" id="donnees"/> Protection des données personnelles  * </p>
+     <p><input type="checkbox" name="donnees" value="" id="donnees" required/> Protection des données personnelles  * </p>
 
      <p id="protection">En cochant cette case, vous acceptez que les données collectées dans le présent formulaire soient utilisées afin de me contacter. Depuis la loi “informatique et libertés” du 6 janvier 1978 modifiée et conformément au Règlement Général sur la Protection des Données (n°2016/679), vous bénéficiez d’un droit d’accès, de rectification ou de suppression des informations qui vous concernent. Si vous souhaitez exercer ce droit et obtenir communication des informations vous concernant, veuillez le renseigner dans le message ci-dessus. </p>
+     
+     <input type="submit" name="Valider" id="valider" value="Valider" onclick="valider();"/>
+
     </form>
            
-     <input type="button" name="Valider" id="valider" value="Valider" onclick="valider();"/>
     </div>
        </div>
+  
+
+       <?php 
+$nom = $_POST['nom'];
+$prenom = $_POST['prenom'];
+$entreprise = $_POST['entreprise'];
+$email = $_POST['email'];
+$tel = $_POST['tel'];
+$message = $_POST['message'];
+
+/* Si les variables sont bonne */
+$to="maud.lherbier@gmail.com";
+
+/*Le sujet du message qui apparaitra*/
+$sujet="Message depuis le site";
+$msg = '';
+/*Le message en lui même*/
+/*$msg = 'Mail envoye depuis le site' "rnrn";*/
+$msg .= 'Nom : '.$nom;
+$msg .= 'Prénom : '.$prenom;
+$msg .= 'Nom Entreprise : ' .$entreprise;
+$msg .= 'Email: '.$email;
+$msg .= 'Téléphone: '.$tel;
+$msg .= 'Message: '.$message;
+/*Les en-têtes du mail*/
+$headers = 'From: MESSAGE DU SITE';
+/*L'envoi du mail - Et page de redirection*/
+mail($to, $sujet, $msg, $headers);
+?>
     
     </body>
     

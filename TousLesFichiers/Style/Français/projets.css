@@ -1,0 +1,25 @@
+.nav-item {
+  margin-right:20px;
+}
+
+nav{
+    text-align: center;
+}
+
+.navbar{
+    background-color: #15829D;
+    color : #FFFFFF;
+}
+
+navbar{
+    background-color: #15829D;
+    text-align: center;
+    color : #FFFFFF;
+}
+
+#gb{
+    width: 50%;
+    height : 70%;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
