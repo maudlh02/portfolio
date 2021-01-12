@@ -64,7 +64,7 @@
         
             <hr>
        <div id="formulaire">
- <form method="post" action='contact.html'>
+ <form method="post" action='../../PHP/contact.php'>
      <p></p>
     <p>
         <label for="nom" class="champ"> Votre Nom : * </label>
@@ -107,37 +107,6 @@
            
     </div>
        </div>
-  
-
-       <?php 
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-$entreprise = $_POST['entreprise'];
-$email = $_POST['email'];
-$tel = $_POST['tel'];
-$message = $_POST['message'];
-
-$to="maud.lherbier@gmail.com";
-
-
-$entete  = 'MIME-Version: 1.0' . "\r\n";
-$entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-$entete .= 'From: ' . $_POST['email'] . "\r\n";
-
-/*Le sujet du message qui apparaitra*/
-$sujet="Message depuis le site";
-
-$msg = '';
-$msg .= 'Nom : '.$nom;
-$msg .= 'Prénom : '.$prenom;
-$msg .= 'Nom Entreprise : ' .$entreprise;
-$msg .= 'Email: '.$email;
-$msg .= 'Téléphone: '.$tel;
-$msg .= 'Message: '.$message;
-
-
-mail($to, $sujet, $msg, $entete);
-?>
     
     </body>
     
