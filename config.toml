@@ -1,0 +1,6 @@
+baseURL = "https://maud-lherbier.fr/"
+languageCode = "en-us"
+title = "Portfolio"
+theme = "funnyHorse"
+[params]
+    description = "Mon portfolio permet de vous présenter mes différents projets et mon expérience."
